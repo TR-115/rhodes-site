@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rhodes Outdoor Equipment | Built for the Canadian Wilderness</title>
+  <meta name="description" content="Simple, reliable gear for archery, hunting, and camping. Built in Canada for the backcountry."/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --dark: #1a1a1a;
+      --accent: #c41e3a;     /* Canadian red */
+      --light: #f5f5f5;
+      --gray: #333;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Arial', sans-serif; background:var(--light); color:var(--gray); line-height:1.6; }
+    header {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504280390367-361ea3371e87?q=80&w=2070');
+      background-size: cover;
+      background-position: center;
+    }
+    h1 { font-size: 3.5rem; margin-bottom: 10px; }
+    h1 span { color: var(--accent); }
+    .tagline { font-size: 1.4rem; opacity: 0.9; }
+    section { padding: 80px 20px; text-align:center; max-width:1100px; margin:auto; }
+    .about { background: white; }
+    .products { background: #eee; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:30px; margin-top:40px; }
+    .card {
+      background: white; padding:30px; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    }
+    .card i { font-size:3rem; color:var(--accent); margin-bottom:20px; }
+    footer {
+      background:var(--dark); color:white; text-align:center; padding:40px 20px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+    .btn:hover { background:#a1172d; }
+    @media (max-width:768px) { h1 {font-size:2.5rem;} }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>RHODES <span>OUTDOOR EQUIPMENT</span></h1>
+    <p class="tagline">Simple. Reliable. Built for the Canadian backcountry.</p>
+  </header>
+
+  <section class="about">
+    <h2>Canadian-Made Gear That Works</h2>
+    <p style="max-width:700px;margin:20px auto;font-size:1.2rem;">
+      We design tough, no-nonsense equipment for archers, hunters, and campers who spend more time in the bush than in the store.
+      Every product is tested in real Canadian wilderness — because shortcuts don’t survive -40°C.
+    </p>
+    <a href="mailto:info@rhodesoutdoorequipment.com" class="btn">Get in Touch</a>
+  </section>
+
+  <section class="products">
+    <h2>Coming Winter 2025/26</h2>
+    <div class="grid">
+      <div class="card">
+        <i class="fas fa-bullseye"></i>
+        <h3>Archery Release Trainer</h3>
+        <p>Perfect your form all year round — even in the off-season.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-crosshairs"></i>
+        <h3>Broadhead Alignment Tool</h3>
+        <p>Get perfect blade alignment in under 60 seconds.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-campground"></i>
+        <h3>Backcountry Essentials</h3>
+        <p>More rugged gear launching soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rhodes Outdoor Equipment. Made in Canada.</p>
+    <p style="margin-top:10px;">
+      <a href="mailto:info@rhodesoutdoorequipment.com" style="color:white;">info@rhodesoutdoorequipment.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
