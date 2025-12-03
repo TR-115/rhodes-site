@@ -6,24 +6,31 @@
   <title>Rhodes Outdoor Equipment | Built for the Wilderness</title>
   <meta name="description" content="Simple, reliable gear for archery, hunting, and camping. Built in Canada for the backcountry."/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏹</text></svg>">
+
+  <!-- NEW FAVICON – points to your /images/favicon.ico -->
+  <link rel="icon" href="/images/favicon.ico?v=2" type="image/x-icon">
+  <link rel="shortcut icon" href="/images/favicon.ico?v=2" type="image/x-icon">
+
+  <!-- Recommended for iPhone/iPad homescreen (optional but looks pro) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
   <style>
     :root {
-      --dark: #0d0e0c;        /* almost black */
-      --primary: #2d3a2f;     /* deep OD green */
-      --accent: #4b5e40;      /* muted ranger green */
-      --gray: #b0b0a6;        /* coyote/gray-tan */
-      --text-light: #d4d4cb;  /* desaturated light gray */
-      --bg-light: #1c1f1b;    /* very dark gray-green */
+      --dark: #0d0e0c; /* almost black */
+      --primary: #2d3a2f; /* deep OD green */
+      --accent: #4b5e40; /* muted ranger green */
+      --gray: #b0b0a6; /* coyote/gray-tan */
+      --text-light: #d4d4cb; /* desaturated light gray */
+      --bg-light: #1c1f1b; /* very dark gray-green */
     }
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { 
-      font-family: 'Arial', sans-serif; 
-      background:#111; 
-      color: var(--text-light); 
-      line-height:1.6; 
+    body {
+      font-family: 'Arial', sans-serif;
+      background:#111;
+      color: var(--text-light);
+      line-height:1.6;
     }
-   
+  
     header {
       background: var(--dark);
       color: var(--text-light);
@@ -36,7 +43,7 @@
     .logo-header { max-width: 90%; margin: 0 auto; }
     .logo-link { display: block; margin-bottom: 20px; }
     .logo {
-      height: 140px;           /* ← bigger logo */
+      height: 140px; /* ← bigger logo */
       width: auto;
       max-width: 100%;
       filter: brightness(0) invert(1);
@@ -44,18 +51,16 @@
     }
     .logo-link:hover .logo { transform: scale(1.05); }
     .tagline {
-      font-size: 1.1rem;       /* ← smaller tagline */
+      font-size: 1.1rem; /* ← smaller tagline */
       opacity: 0.9;
       text-shadow: 0 1px 6px rgba(0,0,0,0.9);
       margin-top: 12px;
       color: var(--gray);
     }
     h1, h2, h3 { color: var(--text-light); text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
-
     section { padding: 80px 20px; text-align:center; max-width:1100px; margin:auto; }
     .about { background: var(--bg-light); }
     .products { background: #151615; }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
@@ -74,10 +79,10 @@
       transform: translateY(-8px);
       box-shadow: 0 12px 30px rgba(0,0,0,0.6);
     }
-    .card i { 
-      font-size: 3rem; 
-      color: var(--accent); 
-      margin-bottom: 20px; 
+    .card i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 20px;
     }
     .btn {
       display: inline-block;
@@ -103,7 +108,6 @@
     }
     footer a { color: var(--gray); text-decoration: none; }
     footer a:hover { color: var(--text-light); }
-
     @media (max-width: 768px) {
       header { padding: 90px 20px; }
       .logo { height: 110px; }
