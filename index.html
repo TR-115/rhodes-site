@@ -74,14 +74,7 @@
         radial-gradient(ellipse at 60% 40%, var(--olive) 0%, var(--olive-dk) 50%, var(--ink) 100%);
     }
 
-    /* pine tree silhouette strip */
-    .hero::before {
-      content: '';
-      position: absolute; bottom: 0; left: 0; right: 0; height: 220px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 220'%3E%3Cpolygon points='0,220 80,220 60,160 90,165 55,100 85,108 45,45 105,55 70,0 130,55 95,45 125,105 95,108 125,155 100,160 120,220' fill='%230e1109'/%3E%3Cpolygon points='200,220 290,220 260,155 295,162 255,90 290,100 245,30 310,42 270,0 335,42 295,30 330,100 295,90 330,155 305,162 325,220' fill='%230e1109'/%3E%3Cpolygon points='400,220 470,220 448,168 475,174 445,115 468,122 440,68 468,76 448,30 480,76 460,68 480,120 455,115 478,174 455,168 472,220' fill='%230e1109'/%3E%3Cpolygon points='550,220 640,220 608,158 645,165 608,100 640,110 600,48 660,58 622,8 684,58 646,48 668,108 632,100 665,162 630,158 648,220' fill='%230e1109'/%3E%3Cpolygon points='750,220 830,220 808,168 835,174 805,115 828,122 800,68 828,76 808,30 840,76 820,68 840,120 815,115 838,174 815,168 832,220' fill='%230e1109'/%3E%3Cpolygon points='950,220 1040,220 1008,158 1045,165 1008,100 1040,110 1000,48 1060,58 1022,8 1084,58 1046,48 1068,108 1032,100 1065,162 1030,158 1048,220' fill='%230e1109'/%3E%3Cpolygon points='1150,220 1230,220 1208,168 1235,174 1205,115 1228,122 1200,68 1228,76 1208,30 1240,76 1220,68 1240,120 1215,115 1238,174 1215,168 1232,220' fill='%230e1109'/%3E%3Cpolygon points='1340,220 1440,220 1410,158 1440,165 1408,100 1440,110 1400,48 1440,60 1415,8 1440,40 1440,0 1440,220' fill='%230e1109'/%3E%3C/svg%3E") bottom/cover no-repeat;
-      opacity: 0.9;
-      z-index: 1;
-    }
+
 
     .hero-content { position: relative; z-index: 2; max-width: 700px; }
     .hero-eyebrow {
@@ -349,7 +342,9 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
-      nav { padding: 14px 24px; }
+      nav { padding: 12px 20px; }
+      nav img { height: 36px; }
+      .nav-links .nav-text { display: none; }
       .hero { padding: 100px 28px 60px; }
       .about-strip { grid-template-columns: 1fr; gap: 40px; padding: 48px 28px; }
       .product-section { padding: 60px 28px; }
@@ -369,8 +364,8 @@
     <img src="https://rhodesoutdoor.com/images/RHODESlogo.svg" alt="Rhodes Outdoor Equipment" onerror="this.style.display='none'; this.nextSibling.style.display='block'">
     <span style="display:none; font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:0.1em; color:var(--white);">RHODES</span>
     <div class="nav-links">
-      <a href="#products">Products</a>
-      <a href="#about">About</a>
+      <a href="#products" class="nav-text">Products</a>
+      <a href="#about" class="nav-text">About</a>
       <a href="https://www.amazon.com/dp/B0GN1NKCQJ" target="_blank" class="nav-cta btn">Buy on Amazon</a>
     </div>
   </nav>
