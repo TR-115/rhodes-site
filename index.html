@@ -307,6 +307,11 @@
       font-style: italic;
     }
 
+    /* ─── PRODUCT SHOT ─── */
+    .product-head { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-bottom: 22px; }
+    .product-head .product-subtitle { margin-bottom: 0; }
+    .product-shot { width: 46%; max-width: 400px; height: auto; display: block; filter: drop-shadow(0 0 14px rgba(232,213,176,0.12)) drop-shadow(0 8px 10px rgba(0,0,0,0.45)); }
+
     /* ─── NAV LINKS ─── */
     .nav-links { display: flex; align-items: center; gap: 26px; }
     .nav-ig { display: inline-flex; }
@@ -345,6 +350,7 @@
     .retail-cta .hero-btn { align-self: center; }
     .retail-cta p { color: rgba(250,250,246,0.75); font-size: 15px; }
     .retail-cta p a { color: var(--tan); }
+    .retail-cta .copied-note { background: rgba(200,169,110,0.15); border: 1px solid rgba(200,169,110,0.4); padding: 10px 16px; color: var(--white); }
 
     /* ─── ABOUT ─── */
     .about { padding: 64px 60px; background: var(--bark); }
@@ -397,6 +403,8 @@
       .spec:nth-last-child(-n+2) { border-bottom: none; }
       footer { flex-direction: column; gap: 16px; padding: 28px 24px; text-align: center; }
       .nav-links { gap: 14px; }
+      .product-head { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .product-shot { width: 100%; max-width: 340px; }
       .nav-links a:not(.nav-cta):not(.nav-ig) { display: none; }
       .retail { padding: 56px 20px; }
       .retail-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -447,8 +455,13 @@
 
         <!-- Info side -->
         <div class="product-info-side">
-          <div class="product-name">Sling Hook</div>
-          <div class="product-subtitle">Rifle Shoulder Strap Keeper for Backpack</div>
+          <div class="product-head">
+            <div>
+              <div class="product-name">Sling Hook</div>
+              <div class="product-subtitle">Rifle Shoulder Strap Keeper for Backpack</div>
+            </div>
+            <img class="product-shot" src="images/sling-hook-strap.png" alt="The Sling Hook with its hook-and-loop strap" width="914" height="112" loading="lazy">
+          </div>
 
           <p class="product-desc">
             Keep your rifle right where you need it. The Sling Hook attaches to your backpack shoulder strap and stops your rifle sling from sliding off — no slipping, no re-adjusting, no fumbling. Quick to attach, easy to remove, tough enough to forget about.
@@ -566,7 +579,8 @@
         </div>
       </div>
       <div class="retail-cta">
-        <a class="hero-btn" href="mailto:info@rhodesoutdoor.com?subject=Wholesale%20enquiry%20-%20Sling%20Hook">Request Wholesale Pricing</a>
+        <a class="hero-btn" id="wholesale-btn" href="mailto:info@rhodesoutdoor.com?subject=Wholesale%20enquiry%20-%20Sling%20Hook">Request Wholesale Pricing</a>
+        <p class="copied-note" id="copied-note" hidden>Email address copied: <strong>info@rhodesoutdoor.com</strong>. Paste it into your email app if nothing opened.</p>
         <p>Email <a href="mailto:info@rhodesoutdoor.com?subject=Wholesale%20enquiry%20-%20Sling%20Hook">info@rhodesoutdoor.com</a> for the wholesale sheet or a sample.</p>
       </div>
     </div>
@@ -588,5 +602,19 @@
     <p>© 2026 Rhodes Outdoor Equipment &nbsp;·&nbsp; Victoria, BC &nbsp;·&nbsp; <a href="mailto:info@rhodesoutdoor.com">info@rhodesoutdoor.com</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/rhodes.outdoor/" target="_blank" rel="noopener">Instagram @rhodes.outdoor</a> &nbsp;·&nbsp; <a href="#retailers">Wholesale</a></p>
   </footer>
 
+  <script>
+    (function () {
+      var btn = document.getElementById('wholesale-btn');
+      var note = document.getElementById('copied-note');
+      if (!btn || !note) return;
+      btn.addEventListener('click', function () {
+        var email = 'info@rhodesoutdoor.com';
+        try {
+          if (navigator.clipboard) navigator.clipboard.writeText(email).catch(function () {});
+        } catch (e) {}
+        note.hidden = false;
+      });
+    })();
+  </script>
 </body>
 </html>
