@@ -307,6 +307,56 @@
       font-style: italic;
     }
 
+    /* ─── NAV LINKS ─── */
+    .nav-links { display: flex; align-items: center; gap: 26px; }
+    .nav-ig { display: inline-flex; }
+    .nav-ig svg { width: 20px; height: 20px; }
+
+    /* ─── WHERE TO BUY ─── */
+    .where-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--tan); margin-bottom: 10px; scroll-margin-top: 110px;
+    }
+    .stockists { list-style: none; margin-bottom: 18px; display: grid; gap: 6px; }
+    .stockists li { font-size: 15px; color: rgba(250,250,246,0.85); }
+    .stockists strong { color: var(--white); font-weight: 600; }
+    .amazon-note a { color: var(--tan); }
+
+    /* ─── FOR RETAILERS ─── */
+    .retail {
+      background: var(--olive-dk);
+      border-top: 1px solid rgba(200,169,110,0.15);
+      padding: 80px 60px; scroll-margin-top: 89px;
+    }
+    .retail-inner { max-width: 920px; margin: 0 auto; }
+    .retail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 36px; }
+    .retail h3 {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
+      font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--tan); margin-bottom: 14px;
+    }
+    .feature-list.one-col { grid-template-columns: 1fr; margin-bottom: 0; }
+    .feature-list.one-col li { font-size: 15px; }
+    .retail dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 18px; font-size: 15px; }
+    .retail dt { color: var(--smoke); }
+    .retail dd { color: var(--white); font-variant-numeric: tabular-nums; }
+    .retail-cta { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+    .retail-cta .hero-btn { align-self: center; }
+    .retail-cta p { color: rgba(250,250,246,0.75); font-size: 15px; }
+    .retail-cta p a { color: var(--tan); }
+
+    /* ─── ABOUT ─── */
+    .about { padding: 64px 60px; background: var(--bark); }
+    .about-inner { max-width: 720px; margin: 0 auto; text-align: center; display: grid; gap: 14px; justify-items: center; }
+    .about .section-label {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 12px;
+      letter-spacing: 0.22em; text-transform: uppercase; color: var(--tan);
+    }
+    .about p { font-size: 17px; color: rgba(250,250,246,0.8); }
+    .about-ig { color: var(--tan); font-family: 'Barlow Condensed', sans-serif; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; }
+    .about-ig:hover { text-decoration: underline; }
+
     /* ─── FOOTER ─── */
     footer {
       background: var(--ink);
@@ -346,6 +396,11 @@
       .spec { border-bottom: 1px solid rgba(200,169,110,0.15); }
       .spec:nth-last-child(-n+2) { border-bottom: none; }
       footer { flex-direction: column; gap: 16px; padding: 28px 24px; text-align: center; }
+      .nav-links { gap: 14px; }
+      .nav-links a:not(.nav-cta):not(.nav-ig) { display: none; }
+      .retail { padding: 56px 20px; }
+      .retail-grid { grid-template-columns: 1fr; gap: 28px; }
+      .about { padding: 48px 20px; }
     }
   </style>
 </head>
@@ -355,20 +410,25 @@
   <nav>
     <img src="images/RHODESlogo.svg" alt="Rhodes Outdoor Equipment" onerror="this.style.display='none'; this.nextSibling.style.display='block'">
     <span style="display:none; font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:0.1em; color:var(--white);">RHODES</span>
-    <a href="#buy" class="nav-cta btn">Buy Now</a>
+    <div class="nav-links">
+      <a href="#buy">Where to Buy</a>
+      <a href="#retailers">For Retailers</a>
+      <a href="https://www.instagram.com/rhodes.outdoor/" target="_blank" rel="noopener" class="nav-ig" aria-label="Rhodes Outdoor on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#buy" class="nav-cta btn">Buy Now</a>
+    </div>
   </nav>
 
   <!-- HERO BANNER -->
   <section class="hero" aria-label="Sling Hook">
     <div class="hero-text">
-      <div class="hero-eyebrow">Field tested · Rhodes Outdoor Equipment</div>
-      <h1>Your sling stays on your shoulder.</h1>
+      <div class="hero-eyebrow">Rhodes Outdoor Equipment</div>
+      <h1>Sling Hook</h1>
       <p>The Sling Hook wraps onto your pack's shoulder strap and holds your rifle sling in place, so you can stop hitching it back up every few steps.</p>
       <div class="hero-btns">
-        <a class="hero-btn" href="https://gonefishinshop.com/rhodes-outdoors-rifle-sling-hook/" target="_blank" rel="noopener">Buy at Gone Fishin'</a>
-        <a class="hero-btn hero-btn-alt" href="https://www.amazon.com/dp/B0GN1NKCQJ?maas=maas_adg_49E9CACCEF3B9D96A1392295317E9A64_afap_abs&amp;ref_=aa_maas&amp;tag=maas" target="_blank" rel="noopener">Buy on Amazon</a>
+        <a class="hero-btn" href="#buy">Where to Buy</a>
+        <a class="hero-btn hero-btn-alt" href="#retailers">For Retailers</a>
       </div>
-      <p class="hero-note">Now at all 4 Gone Fishin' stores on Vancouver Island (Duncan, Nanaimo, Courtenay and Port Alberni), and online at gonefishinshop.com.</p>
+      <p class="hero-note">From a small outdoor gear company in Victoria, BC. On the shelf at outdoor shops on Vancouver Island.</p>
     </div>
     <div class="hero-photo">
       <img src="images/sling-hook-hero.jpg" alt="Hunter hiking with a rifle held on his backpack strap by the Sling Hook" width="1408" height="1280">
@@ -380,8 +440,7 @@
     <div class="product-wrap">
 
       <div class="intro">
-        <div class="section-label">Canadian Designed Gear</div>
-        <div class="section-title">Built for the <span>Wilderness</span></div>
+        <div class="section-title">Canadian Designed Gear</div>
       </div>
 
       <div class="product-card">
@@ -399,7 +458,7 @@
             <li>Prevents rifle sling from sliding off your shoulder</li>
             <li>Attaches to any backpack strap with included hook-and-loop fastener</li>
             <li>No tools or permanent modifications required</li>
-            <li>Keeps hands free for trekking poles, navigation, and other gear</li>
+            <li>No more worrying about a dropped rifle or a smashed scope</li>
             <li>Durable nylon construction</li>
             <li>Compact and low-profile — adds minimal weight to your kit</li>
           </ul>
@@ -418,22 +477,27 @@
               <div class="spec-val">Black</div>
             </div>
             <div class="spec">
-              <div class="spec-label">Fit</div>
-              <div class="spec-val">Universal</div>
+              <div class="spec-label">Fits</div>
+              <div class="spec-val">Pack &amp; bino straps</div>
             </div>
           </div>
 
-          <div class="buy-buttons" id="buy">
+          <div class="where-label" id="buy">Where to buy</div>
+          <ul class="stockists">
+            <li><strong>In store on Vancouver Island:</strong> Gone Fishin' in Duncan, Nanaimo, Courtenay and Port Alberni</li>
+            <li><strong>In the US:</strong> Amazon.com</li>
+          </ul>
+          <div class="buy-buttons">
             <a class="gonefishin-btn" href="https://gonefishinshop.com/rhodes-outdoors-rifle-sling-hook/" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-              Buy at Gone Fishin'
+              Order from Gone Fishin'
             </a>
             <a class="amazon-btn" href="https://www.amazon.com/dp/B0GN1NKCQJ?maas=maas_adg_685466C6548F559DDB00512EF4AE1733_afap_abs&amp;ref_=aa_maas&amp;tag=maas" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.67-1.49.86-3.18 1.48-5.07 1.86-1.89.37-3.68.55-5.37.55-3.1 0-5.93-.59-8.49-1.78C.493 20.87.05 20.55 0 20.15c-.02-.2.01-.37.13-.47zM20.23 15.91c-.15-.19-.32-.22-.52-.12l-.43.16c-.6.24-1.1.41-1.51.52l-.26.07-.27.06c-.7.15-1.38.23-2.05.23-1.39 0-2.55-.35-3.47-1.05-.92-.7-1.38-1.67-1.38-2.92 0-.93.27-1.73.82-2.41.55-.68 1.28-1.14 2.19-1.4.9-.25 1.88-.38 2.96-.38.55 0 1.13.04 1.76.1V8.2c0-.83-.17-1.4-.5-1.72-.34-.32-.92-.47-1.77-.47-.58 0-1.17.08-1.78.25-.6.17-1.08.35-1.42.55-.11.07-.21.06-.29-.04l-.36-.5c-.08-.11-.08-.22 0-.35.29-.26.7-.5 1.24-.7.96-.35 2.02-.52 3.18-.52 1.26 0 2.22.29 2.86.87.64.58.97 1.49.97 2.72v4.96c0 .38.18.57.54.57h.35c.13 0 .22.07.22.22v.59c0 .14-.08.22-.22.24l-.28.02c-.56.04-.98-.04-1.27-.25-.28-.2-.46-.53-.56-.97zm-2.36-.86c.48-.25.82-.55 1.02-.91v-1.62c-.55-.06-1.07-.09-1.55-.09-.88 0-1.6.18-2.16.55-.56.37-.84.9-.84 1.6 0 .62.19 1.1.57 1.44.38.34.9.51 1.57.51.52 0 1.01-.16 1.39-.48zM7.41 10.07c-.7-.26-1.47-.38-2.33-.38-.65 0-1.33.07-2.04.22-.7.15-1.27.36-1.7.62-.14.09-.2.2-.17.33l.2.75c.04.14.13.18.27.12.35-.15.77-.3 1.25-.44.49-.14.98-.2 1.48-.2.77 0 1.38.16 1.82.47.44.31.66.82.66 1.53v.41c-.56-.06-1.1-.09-1.61-.09-1.12 0-2.04.22-2.74.67-.7.44-1.05 1.1-1.05 1.98 0 .76.25 1.37.76 1.82.5.45 1.16.67 1.98.67.61 0 1.13-.12 1.57-.36.44-.24.78-.53 1.01-.88l.1.88c.02.15.1.22.25.22h.85c.14 0 .22-.08.22-.22v-5.07c0-.98-.16-1.74-.49-2.28-.32-.55-.8-.92-1.3-1.18zm-.27 5.28c-.2.37-.49.66-.87.87-.38.21-.78.31-1.2.31-.46 0-.83-.12-1.1-.35-.27-.24-.41-.57-.41-1 0-.51.2-.9.6-1.17.4-.28.96-.41 1.68-.41.43 0 .89.03 1.37.1v1.05c-.03.22-.04.43-.07.6z"/></svg>
             Buy on Amazon
           </a>
           </div>
-          <p class="amazon-note">Now at all 4 Gone Fishin' stores on Vancouver Island (Duncan, Nanaimo, Courtenay and Port Alberni), and online at gonefishinshop.com. In the US, order on Amazon.com.</p>
+          <p class="amazon-note">Want the Sling Hook in your shop? <a href="#retailers">See retailer info</a>.</p>
         </div>
 
       </div>
@@ -466,20 +530,62 @@
       <h2 class="hero-h">Not just for backpacks.</h2>
       <p>The Sling Hook wraps onto the shoulder strap of your binocular harness just as easily as a pack strap. Hook your rifle sling under it and it stays on your shoulder.</p>
       <div class="hero-btns">
-        <a class="hero-btn" href="https://gonefishinshop.com/rhodes-outdoors-rifle-sling-hook/" target="_blank" rel="noopener">Buy at Gone Fishin'</a>
-        <a class="hero-btn hero-btn-alt" href="https://www.amazon.com/dp/B0GN1NKCQJ?maas=maas_adg_B73DC1E3B3584ADA4F27B5C54F68F9A4_afap_abs&amp;ref_=aa_maas&amp;tag=maas" target="_blank" rel="noopener">Buy on Amazon</a>
+        <a class="hero-btn" href="#buy">Where to Buy</a>
       </div>
-      <p class="hero-note">Now at all 4 Gone Fishin' stores on Vancouver Island (Duncan, Nanaimo, Courtenay and Port Alberni), and online at gonefishinshop.com.</p>
     </div>
     <div class="hero-photo">
       <img src="images/sling-hook-bino-harness.jpg" alt="Sling Hook holding a rifle sling on a binocular harness shoulder strap" width="1408" height="1280" loading="lazy">
     </div>
   </section>
 
+  <!-- FOR RETAILERS -->
+  <section class="retail" id="retailers" aria-label="For retailers">
+    <div class="retail-inner">
+      <div class="intro">
+        <div class="section-label">For Retailers</div>
+        <div class="section-title">Carry the <span>Sling Hook</span> in your store</div>
+      </div>
+      <div class="retail-grid">
+        <div class="retail-why">
+          <h3>Why shops carry it</h3>
+          <ul class="feature-list one-col">
+            <li>Every hunter who carries a rifle on a sling has had this problem</li>
+            <li>A small, easy add-on sale at the counter or on a peg</li>
+            <li>A local Island business you can reach directly</li>
+          </ul>
+        </div>
+        <div class="retail-facts">
+          <h3>Product details</h3>
+          <dl>
+            <dt>Model</dt><dd>SH-2025-V1</dd>
+            <dt>UPC</dt><dd>627146071871</dd>
+            <dt>Size</dt><dd>About 50 x 25 x 25 mm</dd>
+            <dt>Material</dt><dd>Nylon 12 hook, hook-and-loop strap</dd>
+            <dt>Packaging</dt><dd>Peg-ready hang card with UPC, 4 x 6 in</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="retail-cta">
+        <a class="hero-btn" href="mailto:info@rhodesoutdoor.com?subject=Wholesale%20enquiry%20-%20Sling%20Hook">Request Wholesale Pricing</a>
+        <p>Email <a href="mailto:info@rhodesoutdoor.com?subject=Wholesale%20enquiry%20-%20Sling%20Hook">info@rhodesoutdoor.com</a> for the wholesale sheet or a sample.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" aria-label="About Rhodes Outdoor Equipment">
+    <div class="about-inner">
+      <div class="section-label">About Us</div>
+      <p>Rhodes Outdoor Equipment is a small gear company in Victoria, BC, started by Tyler Rhodes. After one too many hikes spent hitching his rifle sling back onto his shoulder, Tyler went looking for a fix. Local shops didn't carry one. Online, the options were either pricey US imports or poorly made versions that didn't look like they'd last.</p>
+      <p>So he made his own and took it on a hunt. The difference it made was so big that he knew other hunters would want one too. That prototype became the Sling Hook.</p>
+      <a class="about-ig" href="https://www.instagram.com/rhodes.outdoor/" target="_blank" rel="noopener">Follow along on Instagram @rhodes.outdoor</a>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <img src="images/RHODESlogo.svg" alt="Rhodes Outdoor Equipment" onerror="this.style.display='none'">
-    <p>© 2026 Rhodes Outdoor Equipment &nbsp;·&nbsp; Get in Touch: <a href="mailto:info@rhodesoutdoor.com">info@rhodesoutdoor.com</a></p>
+    <p>© 2026 Rhodes Outdoor Equipment &nbsp;·&nbsp; Victoria, BC &nbsp;·&nbsp; <a href="mailto:info@rhodesoutdoor.com">info@rhodesoutdoor.com</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/rhodes.outdoor/" target="_blank" rel="noopener">Instagram @rhodes.outdoor</a> &nbsp;·&nbsp; <a href="#retailers">Wholesale</a></p>
   </footer>
 
 </body>
